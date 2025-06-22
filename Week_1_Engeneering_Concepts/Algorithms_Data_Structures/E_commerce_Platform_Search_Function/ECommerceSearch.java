@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class ECommerceSearch {
-    public static Product linearSerach(Product[] products,String targetName){
+    public static Product linearSearch(Product[] products,String targetName){
         for(Product p: products){
             if(p.productName.equalsIgnoreCase(targetName)){
                 return p;
@@ -51,7 +51,7 @@ public class ECommerceSearch {
         };
 
         Product resultBin = binSearch(products, "jacket");
-        Product resultLin = linearSerach(products, "eraser");
+        Product resultLin = linearSearch(products, "eraser");
 
         System.out.print("Linear Search Result: ");
         System.out.println((resultLin != null ? "Found: " + resultLin.productName + " (" + resultLin.category + ")" : "Not found"));
